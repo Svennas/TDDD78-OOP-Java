@@ -1,5 +1,6 @@
 package se.liu.ida.gussv907.tddd78.tetris;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -8,11 +9,12 @@ import java.util.Random;
 public class Board {
     private SquareType[][] squares;
     private int width, height;
+    private Random rnd = new Random();
 
     public Board(int width, int height) {
-        Random rnd = new Random();
-        this.width = rnd.nextInt(15);
-        this.height = rnd.nextInt(15);
+        this.width = width;
+        this.height = height;
+        this.rnd = rnd;
         squares = new SquareType[height][width];
         for(int i = 0; i < height; i++) {
             for(int j = 0; j < width; j++){
@@ -32,6 +34,17 @@ public class Board {
     public SquareType getType(int width, int height) {
         SquareType type = squares[width][height];
         return type;
+    }
+
+    public SquareType[][] rndBoard() {
+        SquareType[] rndValue = SquareType.values();
+        for(int i = 0; i < height; i++) {
+            for(int j = 0; j < width; j++){
+                int index = rnd.nextInt(8);
+                squares[i][j] = rndValue[index];
+            }
+        }
+        return squares;
     }
 
     public static void main(String[] args) {
