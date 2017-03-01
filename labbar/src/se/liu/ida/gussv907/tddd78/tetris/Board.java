@@ -10,6 +10,8 @@ public class Board {
     private SquareType[][] squares;
     private int width, height;
     private Random rnd = new Random();
+    private Poly falling;
+    private int x, y;
 
     public Board(int width, int height) {
         this.width = width;
@@ -45,6 +47,18 @@ public class Board {
             }
         }
         return squares;
+    }
+
+    public Poly getFalling() {
+        return falling;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
     }
 
     public static void main(String[] args) {

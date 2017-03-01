@@ -7,8 +7,14 @@ import java.util.ArrayList;
  */
 public class Poly {
     private SquareType[][] poly;
+    private int size = poly.length;
 
     public Poly(SquareType[][] poly) {
         this.poly = poly;
+        this.size = size;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
