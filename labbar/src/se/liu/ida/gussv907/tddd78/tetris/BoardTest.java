@@ -7,12 +7,12 @@ public class BoardTest {
 
     public static void main(String[] args) {
         Board testBoard = new Board(5, 5);
-        System.out.println(BoardToTextConverter.converterToText(testBoard));
+        System.out.println(BoardToTextConverter.convertToText(testBoard));
 
         for(int i = 0; i < 10; i++) {
             testBoard.rndBoard();
             System.out.println(BoardToTextConverter.
-                    converterToText(testBoard));
+                    convertToText(testBoard));
         }
     }
 }

@@ -5,7 +5,7 @@ package se.liu.ida.gussv907.tddd78.tetris;
  */
 public class BoardToTextConverter {
 
-    public static String converterToText(Board board) {
+    public static String convertToText(Board board) {
 
         StringBuilder builder = new StringBuilder();
 
