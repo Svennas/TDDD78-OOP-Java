@@ -34,7 +34,7 @@ public class BoardToTextConverter {
                         builder.append("O");
                         break;
                     case I:
-                        builder.append("V");
+                        builder.append("I");
                         break;
                 }
                 if(j != board.getWidth() -1) {

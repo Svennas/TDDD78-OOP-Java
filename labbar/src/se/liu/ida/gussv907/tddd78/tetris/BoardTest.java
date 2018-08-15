@@ -14,5 +14,9 @@ public class BoardTest {
             System.out.println(BoardToTextConverter.
                     convertToText(testBoard));
         }
+
+        TetrominoMaker test = new TetrominoMaker();
+
+        System.out.println(test.getNumberOfTypes());
     }
 }

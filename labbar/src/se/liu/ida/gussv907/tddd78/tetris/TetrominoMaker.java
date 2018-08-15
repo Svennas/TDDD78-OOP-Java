@@ -8,11 +8,13 @@ import java.util.Random;
 public class TetrominoMaker {
 
     public int getNumberOfTypes() {
-        return SquareType.values().length;
+        return SquareType.values().length -1;
     }
+    // -1 to get rid of EMPTY
 
-    public Poly getPoly(int n) {
-        SquareType[][] squares = null;
+    /*public Poly getPoly(int n) {
+
+        Poly[][] newPoly = null;
 
         if(n < 0 || n > getNumberOfTypes() - 1) {
             throw new IllegalArgumentException("Invalid index: " + n);
@@ -20,38 +22,34 @@ public class TetrominoMaker {
         else {
             switch(n) {
                 case 0:
-                    squares = null;
+                    newPoly = iPoly();
                     break;
                 case 1:
-                    squares = iPoly();
+                    newPoly = oPoly();
                     break;
                 case 2:
-                    squares = oPoly();
+                    newPoly = tPoly();
                     break;
                 case 3:
-                    squares = tPoly();
+                    newPoly = sPoly();
                     break;
                 case 4:
-                    squares = sPoly();
+                    newPoly = zPoly();
                     break;
                 case 5:
-                    squares = zPoly();
+                    newPoly = jPoly();
                     break;
                 case 6:
-                    squares = jPoly();
-                    break;
-                case 7:
-                    squares = lPoly();
+                    newPoly = lPoly();
                     break;
             }
         }
-        Poly sqPoly = new Poly(squares);
-        return sqPoly;
+        return newPoly;
     }
 
-    private SquareType[][] iPoly() {
-        SquareType[][] type = new SquareType[3][3];
-        type[0][2] = SquareType.I;
+    private Poly[][] iPoly() {
+        Poly[][] type = new Poly[3][3];
+        type[0][2] = Poly.I;
         type[1][2] = SquareType.I;
         type[2][2] = SquareType.I;
         type[3][2] = SquareType.I;
@@ -110,5 +108,5 @@ public class TetrominoMaker {
         type[2][1] = SquareType.L;
         type[2][2] = SquareType.L;
         return type;
-    }
+    }*/
 }
