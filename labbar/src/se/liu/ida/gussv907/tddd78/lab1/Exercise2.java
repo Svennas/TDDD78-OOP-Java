@@ -26,7 +26,7 @@ public class Exercise2 {
 
     public static void main(String[] args) {
         int min = 10;
-        int max = 20;
+        int max = 22;
         String input = JOptionPane.showInputDialog("Input 'while' or 'for':");
         switch(input) {
             case ("while"):

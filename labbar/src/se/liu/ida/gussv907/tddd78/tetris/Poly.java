@@ -9,7 +9,7 @@ public class Poly {
     private SquareType[][] poly;
     private int size;
 
-    public Poly(SquareType[][] poly) {
+    public Poly(SquareType[][] square) {
         this.poly = poly;
         this.size = poly.length;
     }

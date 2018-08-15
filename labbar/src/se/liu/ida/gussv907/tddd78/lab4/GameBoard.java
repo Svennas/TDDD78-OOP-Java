@@ -34,32 +34,15 @@ public class GameBoard
 	this.currentY = height / 2;
     }
 
-    public void moveDown() {
-	if (canMove(1, 0)) {
-	    currentY++;
-	}
+    public boolean canMove(Move there) {
+           return !cells[currentY + there.deltaY][currentX + there.deltaX].isObstacle;
     }
 
-    public void moveUp() {
-	if (canMove(-1, 0)) {
-	    currentY--;
-	}
-    }
+    public void move(Move there) {
+	if (canMove(there)) {
+	    currentX = there.deltaX;
 
-    public void moveRight() {
-	if (canMove(0, 1)) {
-	    currentX++;
 	}
-    }
-
-    public void moveLeft() {
-	if (canMove(0, -1)) {
-	    currentX--;
-	}
-    }
-
-    public boolean canMove(int deltaY, int deltaX) {
-           return !cells[currentY + deltaY][currentX + deltaX].isObstacle;
     }
 
 

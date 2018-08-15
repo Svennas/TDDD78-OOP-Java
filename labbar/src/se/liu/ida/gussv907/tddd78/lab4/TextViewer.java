@@ -6,16 +6,16 @@ import java.awt.*;
 
 public class TextViewer extends JComponent {
 
-    public static final int LEFT_ALIGNED = 0;
-    public static final int WIDTH = 600;
-    public static final int HEIGTH = 300;
-    public static final int FONT_SIZE = 12;
-    public static final int ROW_DISTANCE = 1;
-    public static final int PARAGRAPH_DISTANCE = 4;
+    private static final int LEFT_ALIGNED = 0;
+    private static final int WIDTH = 600;
+    private static final int HEIGTH = 300;
+    private static final int FONT_SIZE = 12;
+    private static final int ROW_DISTANCE = 1;
+    private static final int PARAGRAPH_DISTANCE = 4;
 
-    public int startX = LEFT_ALIGNED;
-    public int paragraph = 0;
-    public int row = 0;
+    private int startX = LEFT_ALIGNED;
+    private int paragraph = 0;
+    private int row = 0;
 
     public TextViewer() throws HeadlessException {
         setPreferredSize(new Dimension(WIDTH, HEIGTH));
