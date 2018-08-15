@@ -11,7 +11,7 @@ public class Board {
     private int width, height;
     private Random rnd = new Random();
     private Poly falling;
-    private int x, y;
+    private int tetroX, tetroY;
 
     public Board(int width, int height) {
         this.width = width;
@@ -49,16 +49,18 @@ public class Board {
         return squares;
     }
 
-    public Poly getFalling() {
-        return falling;
+    public Poly getFalling() { return falling; }
+
+    public int getTetroX() {
+        return tetroX;
     }
 
-    public int getX() {
-        return x;
+    public int getTetroY() {
+        return tetroY;
     }
 
-    public int getY() {
-        return y;
+    SquareType getSquareAt(int x, int y) {
+        return null;
     }
 
     public static void main(String[] args) {
