@@ -1,11 +1,3 @@
-Labbar för TDDD78-kursen. Innehåller:
+# Java: Object Oriented Programming
 
-- Laboration 1
-
-- Laboration 2
-
-- Laboration 3
-
-- Laboration 4
-
-- Tetris
+Labs for the course TDDD78. Contains lab 1 to 4.
